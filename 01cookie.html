@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+//     let data = new Date()
+//     data.setMinutes(44)
+//     let dataStr = data.toUTCString()
+//     console.log(dataStr)
+//     let cookie = document.cookie
+//     document.cookie = "name=yaoqi"
+//     document.cookie = "sex=man; express="+ dataStr
+//     console.log(document.cookie)
+    
+    // function getCookie(){
+    //     let cookieString = document.cookie
+    //     let obj = {}
+    //     let cookieArr = cookieString.split(";")
+    //     cookieArr.forEach(item =>{
+    //       let tempArr = item.split('=')
+    //       let key = tempArr[0].trim()
+    //       let value = tempArr[1]
+    //       obj[key] = value
+    //     })
+    //     return obj
+    // }
+
+    // let cookieObj = getCookie()
+    // console.log(cookieObj)
+
+    function setCookie(key, value, expires) {
+        if (!expires) {
+            document.cookie = `${key}=${value}`
+        }else {
+            let date = new Date()
+            let unix = date.getTime()
+            unix = express * 1000 + unix
+
+            let newDateStr = new Date(unix).toUTCString()
+            document.cookie = `${key}=${value}; expires=${newDateStr}`
+
+        }
+     }
+
+     setCookie('foot','酸汤肥牛','50')
+</script>
+</html>
